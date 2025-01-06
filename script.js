@@ -65,3 +65,39 @@ function nextSlide() {
 
 sliderLeftButton.addEventListener("click", previousSlide);
 sliderRightButton.addEventListener("click", nextSlide);
+
+
+// form
+
+const supportForm = document.querySelector(".support-form");
+const nameInput = document.querySelector("input[name ='name']");
+const emailInput = document.querySelector("input[name ='email']");
+const messageInput = document.querySelector("textarea[name ='message']");
+
+
+
+function validateInput(input, message){
+    const errorMessage = input.nextElementSibling;
+    errorMessage.textContent = `Данные отсутствуют. Заполните поле ${message}`;
+    if(input.value.trim() === ""){
+        errorMessage.classList.add("error");
+        return false;
+    }else{
+        input.classList.remove("error");
+        errorMessage.textContent = " ";
+        return true;
+    }
+}
+
+supportForm.addEventListener("submit", function(e){
+    e.preventDefault();
+   const nameIsValid =  validateInput(nameInput, "Имя");
+   const emailIsValid = validateInput(emailInput, "E-mail");
+   const messageIsValid = validateInput(messageInput, "Сообщение");
+
+   if(nameIsValid && emailIsValid &&  messageIsValid ){
+    alert("Данные успешно отправлены!!!");
+    supportForm.reset();
+   }
+    
+})

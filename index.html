@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>BookCamp</title>
+</head>
+<body>
+  <header class="header">
+    <nav class="nav">
+      <div class="nav-part">
+        <img src="./img/logo.png" alt="Logo" height="48">
+        <ul class="nav-links">
+          <li><a href="#books" class="nav-link">Книги</a></li>
+          <li><a href="#testimonials" class="nav-link">Отзывы</a></li>
+          <li><a href="#support" class="nav-link">Служба поддержки</a></li>
+        </ul>
+      </div>
+      <div class="nav-part">
+        <div>
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main class="container">
+    <section id="home">
+      <div class="home-part">
+        <h1 class="title">Твоя личная библиотека в одном клике</h1>
+        <p class="home-text">Погрузитесь в мир литературы: от вдохновляющих биографий до редких коллекционных изданий с быстрой доставкой</p>
+        <a href="#home" class="home-link">Подробнее <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <div class="home-part">
+        <img src="./img/home.png" alt="Home" class="home-img">
+      </div>
+    </section>
+
+    <section id="books">
+      <h2 class="title">Последние книги</h2>
+      <div id="loader">
+        <span class="loader"></span>
+      </div>
+      <div class="books"></div>
+      <div id="error"></div>
+    </section>
+
+    <section id="testimonials">
+      <div class="testimonials-header">
+        <h2 class="title">Отзывы клиентов</h2>
+        <div class="testimonials-nav">
+          <div class="testimonials-btn">
+            <i class="fa-solid fa-arrow-left"></i>
+          </div>
+          <div class="testimonials-btn">
+            <i class="fa-solid fa-arrow-right"></i>
+          </div>
+        </div>
+      </div>
+      <div class="testimonials">
+        <div class="testimonials-container">
+          <div class="testimonials-item">
+            <div class="testimonials-quote">
+              <i class="fa-solid fa-quote-left"></i>
+            </div>
+            <div class="testimonials-info">
+              <p class="testimonials-text">Недавно сделал заказ в этом интернет-магазине, и остался очень доволен! Доставка была молниеносной — всего за два дня книги уже были у меня. Упаковка аккуратная, книги пришли без повреждений. Буду заказывать ещё!</p>
+              <div class="testimonials-author">
+                <img src="https://api.slingacademy.com/public/sample-users/6.png" alt="Avatar" class="testimonials-author__image">
+                <div class="testimonials-author__info">
+                  <h6 class="testimonials-author__name">Самат Сериков</h6>
+                  <p class="testimonials-author__position">Менеджер</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonials-item">
+            <div class="testimonials-quote">
+              <i class="fa-solid fa-quote-left"></i>
+            </div>
+            <div class="testimonials-info">
+              <p class="testimonials-text">Отличный сервис! Возникли вопросы по наличию одного издания, написал в поддержку. Ответили быстро, вежливо и помогли подобрать аналогичный вариант. Такое отношение к клиентам встречается редко!</p>
+              <div class="testimonials-author">
+                <img src="https://api.slingacademy.com/public/sample-users/4.png" alt="Avatar" class="testimonials-author__image">
+                <div class="testimonials-author__info">
+                  <h6 class="testimonials-author__name">Айя Аскарова</h6>
+                  <p class="testimonials-author__position">Учитель математики</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonials-item">
+            <div class="testimonials-quote">
+              <i class="fa-solid fa-quote-left"></i>
+            </div>
+            <div class="testimonials-info">
+              <p class="testimonials-text">Заказал несколько книг, включая редкие издания. Качество отличное: страницы ровные, переплёт крепкий, а обложки без царапин. Очень рад, что нашёл магазин с таким вниманием к деталям!</p>
+              <div class="testimonials-author">
+                <img src="https://api.slingacademy.com/public/sample-users/11.png" alt="Avatar" class="testimonials-author__image">
+                <div class="testimonials-author__info">
+                  <h6 class="testimonials-author__name">Алишер Таубалды</h6>
+                  <p class="testimonials-author__position">Редактор газеты</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          
+        </div>
+      </div>
+    </section>
+
+    <section id="support">
+      <h2 class="support-title">Служба поддержки</h2>
+      <p class="support-text">Если у вас возникли трудности по работе сайта, сложности в оплате или есть вопрос, вы можете обратиться в службу поддержки, мы обязательно вам поможем.</p>
+      <form class="support-form">
+        <div class="support-form__container">
+          <div id="name-input" class="support-form__block">
+            <label class="support-form__label">Имя</label>
+            <input type="text" name="name" class="support-form__input" placeholder="Введите ваше имя">
+            <span class="error-message"></span>
+          </div>
+          <div id="email-input" class="support-form__block">
+            <label class="support-form__label">E-mail</label>
+            <input type="email" name="email" class="support-form__input" placeholder="Введите вашу почту">
+            <span class="error-message"></span>
+          </div>
+          <div id="message-input" class="support-form__block">
+            <label class="support-form__label">Сообщение</label>
+            <textarea class="support-form__input" name="message" placeholder="Расскажите нам о возникшем вопросе"></textarea>
+            <span class="error-message"></span>
+          </div>
+        </div>
+        <button type="submit"  class="support-form__submit">Отправить</button>
+      </form>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-part">
+        <img src="./img/logo.png" alt="Logo" height="48">
+        <p class="footer-text">Все права защищены &copy; 2024</p>
+      </div>
+      <div class="footer-part">
+        <a href="https://www.youtube.com/" target="_blank" class="footer-link">
+          <i class="fa-brands fa-youtube"></i>
+        </a>
+
+        <a href="https://telegram.org/" target="_blank" class="footer-link">
+          <i class="fa-brands fa-telegram"></i>
+        </a>
+
+        <a href="https://www.instagram.com/" target="_blank" class="footer-link">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+  <script src="https://kit.fontawesome.com/c2a7e21e81.js" crossorigin="anonymous"></script>
+  <script src="script.js"></script>  
+</body>
+</html>

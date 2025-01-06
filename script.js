@@ -34,3 +34,34 @@ async function fetchBooks() {
 }
 
 fetchBooks();
+
+//  Slider
+
+const sliderWrapper = document.querySelector(".testimonials");
+const sliderContainer = document.querySelector(".testimonials-container");
+const sliderItems = document.querySelectorAll(".testimonials-item");
+const sliderButtons = document.querySelectorAll(".testimonials-btn");
+const sliderLeftButton = sliderButtons[0];
+const sliderRightButton = sliderButtons[1];
+const offsetSize = sliderWrapper.offsetWidth;
+let sliderIndex = 0;
+
+function moveSlide(index){
+    sliderContainer.style.marginLeft = `-${index * offsetSize}px`;
+}
+
+function previousSlide() {
+    if (sliderIndex !== 0) {
+        sliderIndex--;
+        moveSlide(sliderIndex);
+      }
+}
+function nextSlide() {
+  if (sliderIndex !== sliderItems.length - 1) {
+    sliderIndex++;
+    moveSlide(sliderIndex);
+  }
+}
+
+sliderLeftButton.addEventListener("click", previousSlide);
+sliderRightButton.addEventListener("click", nextSlide);

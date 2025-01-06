@@ -101,3 +101,21 @@ supportForm.addEventListener("submit", function(e){
    }
     
 })
+
+
+// scroll
+
+const navLinks = document.querySelectorAll("a[href^='#']");
+for (const link of navLinks) {
+    link.addEventListener("click", function(e){
+        e.preventDefault();
+        const id = link.getAttribute("href");
+         document.querySelector(id).scrollIntoView({
+            behavior: "smooth"
+         })
+
+    })
+    
+}
+
+ 
